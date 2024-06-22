@@ -29,9 +29,9 @@ To make changes to the codebase, do **not** push your code directly to the main 
 3. Ensure the necessary node modules are installed before running the code.
 
 4. To start the server, run the following commands in your terminal:
+   ```sh
+   npm install
+   npm run dev
 
-   > npm install
-   
-   > npm run dev
 
 Happy Hacking!

@@ -1,0 +1,14 @@
+/* Checkbox.css */
+.checkbox-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container label {
+  color: #333;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}

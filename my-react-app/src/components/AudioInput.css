@@ -1,0 +1,17 @@
+/* AudioInput.css */
+.audioinput-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.audioinput-container label {
+  margin-right: 10px;
+  color: #333;
+  width: 30%; /* Adjust as needed for your layout */
+}
+
+.audioinput-container input {
+  padding: 10px;
+}

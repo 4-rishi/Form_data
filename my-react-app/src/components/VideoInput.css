@@ -1,0 +1,17 @@
+/* VideoInput.css */
+.videoinput-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.videoinput-container label {
+  margin-right: 10px;
+  color: #333;
+  width: 30%; /* Adjust as needed for your layout */
+}
+
+.videoinput-container input {
+  padding: 10px;
+}

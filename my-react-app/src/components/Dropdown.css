@@ -1,0 +1,26 @@
+/* Dropdown.css */
+.dropdown-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-container label {
+  margin-right: 10px;
+  color: #333;
+  width: 30%; /* Adjust as needed for your layout */
+}
+
+.dropdown-container select {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.dropdown-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}

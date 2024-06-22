@@ -1,0 +1,17 @@
+/* PhotoInput.css */
+.photoinput-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.photoinput-container label {
+  margin-right: 10px;
+  color: #333;
+  width: 30%; /* Adjust as needed for your layout */
+}
+
+.photoinput-container input {
+  padding: 10px;
+}

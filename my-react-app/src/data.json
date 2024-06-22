@@ -1,0 +1,186 @@
+{
+    "screens": {
+      "start_screen": {
+            "screen_type" : "start",
+            "display_text" :
+            {
+                "en" : "START SCREEN",
+                "fr" : "Ecran de démarrage"
+            },
+            "notice_text" :
+            {
+                "en" : "We are committed to ensuring the privacy and security of your medical information. As part of our ongoing efforts to provide you with the best possible care, we will be collecting and storing your medical data electronically.",
+                "fr" : "Nous nous engageons à assurer la confidentialité et la sécurité de vos informations médicales. Dans le cadre de nos efforts continus pour vous offrir les meilleurs soins possibles, nous collecterons et stockerons vos données médicales de manière électronique."
+            },
+            "is_required" : true,
+            "is_active" : true,
+            "user_consent" : 
+            {
+                "is_required" : true,
+                "version" : "1.0.0",
+                "type" : ["text", "verbal", "image", "video"],
+                "display_text" :
+                {
+                    "en" : "Your data will only be used for medical purposes and will be kept confidential in accordance with strict privacy laws and regulations. It will not be shared with third parties without your explicit consent, except as required by law.",
+                    "fr" : "Vos données seront uniquement utilisées à des fins médicales et seront traitées de manière confidentielle, conformément aux lois et réglementations strictes en matière de confidentialité. Elles ne seront pas partagées avec des tiers sans votre consentement explicite, sauf si requis par la loi."
+                },
+                "next_screen" : "1"
+            },
+        
+        "next_screen": {
+          "default": "1"
+        }
+      },
+      "1": 
+      {
+        "display_text": {
+          "en": "Screen 1"
+        },
+        "fields": {
+          "Field 1": {
+            "display_text": {
+              "en": "Field 1"
+            },
+            "sub_fields": {
+              "Subfield a": {
+                "field_type": "numeric_entry",
+                "display_text": {
+                  "en": "SpO2 Level"
+                },
+                "min_value": 0,
+                "max_value": 100,
+                "default_value": 98,
+                "step": 1,
+                "unit": "%"
+              },
+              "Subfield b": {
+                "field_type": "numeric_entry",
+                "display_text": {
+                  "en": "Heart Rate"
+                },
+                "default_value": "80"
+              }
+            }
+          }
+        },
+        "next_screen": {
+          "default": "2"
+        },
+        "previous_screen": "start_screen"
+      },
+      "2": {
+        "display_text": {
+          "en": "Screen 2"
+        },
+        "fields": {
+          "Field 2": {
+            "display_text": {
+              "en": "Field 2"
+            },
+            "sub_fields": {
+              "Subfield c": {
+                "field_type": "text_entry",
+                "display_text": {
+                  "en": "Subfield c"
+                },
+                "default_value": ""
+              },
+              "Subfield d": {
+                "field_type": "numeric_entry",
+                "display_text": {
+                  "en": "Subfield d"
+                },
+                "min_value": 0,
+                "max_value": 10,
+                "default_value": 5,
+                "step": 0.1,
+                "unit": "kg"
+              }
+            }
+          }
+        },
+        "next_screen": {
+          "default": "3"
+        },
+        "previous_screen": "1"
+      },
+      "3": {
+        "display_text": {
+          "en": "Screen 3"
+        },
+        "fields": {
+          "Field 3": {
+            "display_text": {
+              "en": "Field 3"
+            },
+            "sub_fields": {
+              "Subfield g": {
+                "field_type": "text_entry",
+                "display_text": {
+                  "en": "Subfield g"
+                },
+                "default_value": ""
+              },
+              "Subfield h": {
+                "field_type": "numeric_entry",
+                "display_text": {
+                  "en": "Subfield h"
+                },
+                "min_value": 0,
+                "max_value": 10,
+                "default_value": 5,
+                "step": 0.1,
+                "unit": "kg"
+              }
+            }
+          }
+        },
+        "next_screen": {
+          "default": "4"
+        },
+        "previous_screen": "2"
+      },
+      "4": {
+        "display_text": {
+          "en": "Screen 4"
+        },
+        "fields": {
+          "Field 4": {
+            "display_text": {
+              "en": "Field 4"
+            },
+            "sub_fields": {
+              "Subfield i": {
+                "field_type": "text_entry",
+                "display_text": {
+                  "en": "Subfield i"
+                },
+                "default_value": ""
+              },
+              "Subfield j": {
+                "field_type": "numeric_entry",
+                "display_text": {
+                  "en": "Subfield j"
+                },
+                "min_value": 0,
+                "max_value": 10,
+                "default_value": 5,
+                "step": 0.1,
+                "unit": "kg"
+              }
+            }
+          }
+        },
+        "next_screen": {
+          "default": "end_screen"
+        },
+        "previous_screen": "3"
+      },
+      "end_screen": {
+        "display_text": {
+          "en": "End Screen"
+        }
+      }
+    }
+  }
+  

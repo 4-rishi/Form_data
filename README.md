@@ -1,35 +1,37 @@
-## FORM COMPONENTS 
+# Project README
 
-This codebase consists of React components to be rendered during form filling.
-The components added are as follows - 
+This codebase comprises React components designed for form filling. The included components are:
 
-1. Text Input 
-2. Audio Input
-3. Checkbox
-4. Dropdown
-5. Numeric Input
-6. Photo Input
-7. Video Input
+- Text Input
+- Audio Input
+- Checkbox
+- Dropdown
+- Numeric Input
+- Photo Input
+- Video Input
 
-These components can be found inside the "my-react-app > src > components" Directory.
-These react components will be used at various parts of the code (wherever required ). I have also included the basic styling of these components.
+These components are located in the `my-react-app > src > components` directory. They will be utilized throughout the codebase as needed. Basic styling for these components is also provided.
 
-In the src folder, the react component "Form.jsx" is calling these components to generate a dynamic and responsive multi-page form. 
-The src folder also has a "data.json" file used by the form component to render the form. 
+Within the `src` folder, the React component `Form.jsx` is responsible for calling these components to generate a dynamic and responsive multi-page form. Additionally, the `src` folder contains a `data.json` file, which the form component uses to render the form.
 
-To make changes in the codebase, do NOT push your code directly to the main branch and create a specific branch for changes. 
+## Making Changes
 
-## HOW TO RUN THE CODE 
+To make changes to the codebase, do **not** push your code directly to the main branch. Instead, create a separate branch for your changes.
 
-1. Clone the "my-react-app" folder into your local dir
-2. The code uses a vite environment, so add it. ( npm create vite@latest to create your dir )
-3. Check for the node modules before running the code.
+## How to Run the Code
 
-   To start the server, run this on the command prompt -
+1. Clone the `my-react-app` folder into your local directory.
 
-      > npm install ( for node modules )
-      
-      > npm run dev
+2. The code uses a Vite environment. Set it up with the following command:
+   ```sh
+   npm create vite@latest
+   
+3. Ensure the necessary node modules are installed before running the code.
 
+4. To start the server, run the following commands in your terminal:
+
+   > npm install
+   
+   > npm run dev
 
 Happy Hacking!

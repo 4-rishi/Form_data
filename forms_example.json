@@ -1,0 +1,529 @@
+{
+    "form_id" : "XXXXXX",
+    "form_name"	: "Form ABC",
+    "time_created"	: "2000-01-01_00:00:00",
+    "time_updated" : "2000-01-01_00:00:00",
+    "created_by" : "John Doe",
+    "version" : "1.0.0",
+    "description" : "Form description",
+    "languages" : ["en", "fr"],
+    "is_active" : true,
+    "is_deleted" : false,
+    "logic_endpoint" : "http://127.0.0.1:8000/phcp-dev",
+    "enforce_sequentiality" : true,
+
+
+    
+    "stations" :
+    {
+        "A" :
+        {
+            "description" : 
+            {
+                "en" : "Station A description",
+                "fr" : "Description de la station A"
+            },
+            "location" :
+            {
+                "name" : "Station A",
+                "latitude" : 45.123,
+                "longitude" : -71.456
+            },
+            "screens" : ["start_screen", "1", "end_screen"],
+            "is_active" : true,
+            "notice_text" :
+            {
+                "en" : "Notice text for station A",
+                "fr" : "Texte de notice pour la station A"
+            },
+            "display_text" :
+            {
+                "en" : "Station A",
+                "fr" : "Station A"
+            },
+            "previous_station" : "nil",
+            "next_station" :
+            {
+                "true" : "B",
+                "false" : "nil",
+                "default" : "B"
+            },
+            "logic" :
+            {
+                "has_logic" : true,
+                "logic_type" : "conditional",
+                "input_args" : 
+                {}
+            },
+            "is_start_station" : true,
+            "is_end_station" : true
+        },
+        "B" :
+        {
+            "description" : 
+            {
+                "en" : "Station B description",
+                "fr" : "Description de la station B"
+            },
+            "location" :
+            {
+                "name" : "Station B",
+                "latitude" : 45.123,
+                "longitude" : -71.456
+            },
+            "screens" : ["2", "3", "4", "end_screen"],
+            "is_active" : true,
+            "notice_text" :
+            {
+                "en" : "Notice text for station B",
+                "fr" : "Texte de notice pour la station B"
+            },
+            "display_text" :
+            {
+                "en" : "Station B",
+                "fr" : "Station B"
+            },
+            "previous_station" : "A",
+            "next_station" :
+            {
+                "true" : "nil",
+                "false" : "nil",
+                "default" : "nil"
+            },
+            "logic" :
+            {
+                "has_logic" : false,
+                "logic_type" : "nil",
+                "input_args" : 
+                {}
+            },
+            "is_start_station" : false,
+            "is_end_station" : true
+        }
+    },
+    "screens" :
+    {
+        "start_screen" :
+        {
+            "screen_type" : "start",
+            "display_text" :
+            {
+                "en" : "Start Screen",
+                "fr" : "Ecran de démarrage"
+            },
+            "notice_text" :
+            {
+                "en" : "Notice text for start screen",
+                "fr" : "Texte de notice pour l'écran de démarrage"
+            },
+            "is_required" : true,
+            "is_active" : true,
+            "user_consent" : 
+            {
+                "is_required" : true,
+                "version" : "1.0.0",
+                "type" : ["text", "verbal", "image", "video"],
+                "display_text" :
+                {
+                    "en" : "User consent text in English",
+                    "fr" : "Texte de consentement utilisateur en français"
+                },
+                "next_screen" : "1"
+            }
+        },
+        "1" :
+        {
+            "screen_type" : "medical test",
+            "fields":
+            {
+                "Field 1" :
+                {
+                    "sub_fields" :
+                    {
+                        "Subfield a" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "%",
+                            "min_value" : 0,
+                            "max_value" : 100,
+                            "default_value" : 50,
+                            "step" : 1,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield a",
+                                "fr" : "Sous-champ a"
+                            }
+                        },
+                        "Subfield b" :
+                        {
+                            "field_type" : "date_entry",
+                            "unit" : "date-time",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "2000-01-01_00:00:00",
+                            "step" : 0,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield b",
+                                "fr" : "Sous-champ b"
+                            }
+                        },
+                        "Subfield c" :
+                        {
+                            "field_type" : "text_entry",
+                            "unit" : "",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "nil",
+                            "step" : 0,
+                            "is_required" : false,
+                            "display_text" :
+                            {
+                                "en" : "Subfield c",
+                                "fr" : "Sous-champ c"
+                            }
+                        },
+                        "Subfield d" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "g",
+                            "min_value" : 0,
+                            "max_value" : 10,
+                            "default_value" : 8,
+                            "step" : 0.01,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield d",
+                                "fr" : "Sous-champ d"
+                            }
+                        }
+                    },
+                    "notice_text" : 
+                    {
+                        "en" : "Notice text for field 1",
+                        "fr" : "Texte de notice pour le champ 1"
+                    },
+                    "is_required" : true,
+                    "display_text" :
+                    {
+                        "en" : "Field 1",
+                        "fr" : "Champ 1"
+                    }
+                },
+                "Field 2" :
+                {   
+                    "sub_fields" :
+                    {
+                        "Subfield e" :
+                        {
+                            "field_type" : "text_entry",
+                            "unit" : "",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "nil",
+                            "step" : 0,
+                            "is_required" : false,
+                            "display_text" :
+                            {
+                                "en" : "Subfield e",
+                                "fr" : "Sous-champ e"
+                            }
+                        },
+                        "Subfield f" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "g",
+                            "min_value" : 0,
+                            "max_value" : 10,
+                            "default_value" : 8,
+                            "step" : 0.01,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield f",
+                                "fr" : "Sous-champ f"
+                            }
+                        }
+                    },
+                    "notice_text" : 
+                    {
+                        "en" : "Notice text for field 2",
+                        "fr" : "Texte de notice pour le champ 2"
+                    },
+                    "is_required" : false,
+                    "display_text" :
+                    {
+                        "en" : "Field 2",
+                        "fr" : "Champ 2"
+                    }
+                }
+            },
+            "notice_text" :
+            {
+                "en" : "Notice text for screen 1",
+                "fr" : "Texte de notice pour l'&eacute;cran 1"
+            },
+            "previous_screen" : "start_screen",
+            "next_screen" :
+            {
+                "true" : "nil",
+                "false" : "nil",
+                "default" : "2"
+            },
+            "enforce_checks" : true,
+            "logic" :
+            {
+                "has_logic" : false,
+                "endpoint_key" : "nil",
+                "input_args" :
+                {}
+            }
+        },
+        "2" :
+        {  
+            "screen_type" : "medical test", 
+            "fields":
+            {
+                "Field 3" :
+                {
+                    "sub_fields" :
+                    {
+                        "Subfield g" :
+                        {
+                            "field_type" : "text_entry",
+                            "unit" : "",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "nil",
+                            "step" : 0,
+                            "is_required" : false,
+                            "display_text" :
+                            {
+                                "en" : "Subfield g",
+                                "fr" : "Sous-champ g"
+                            }
+                        },
+                        "Subfield h" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "g",
+                            "min_value" : 0,
+                            "max_value" : 10,
+                            "default_value" : 8,
+                            "step" : 0.01,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield h",
+                                "fr" : "Sous-champ h"
+                            }
+                        }
+                    },
+                    "notice_text" : 
+                    {
+                        "en" : "Notice text for field 3",
+                        "fr" : "Texte de notice pour le champ 3"
+                    },
+                    "is_required" : false,
+                    "display_text" :
+                    {
+                        "en" : "Field 3",
+                        "fr" : "Champ 3"
+                    }
+                }
+            },
+            "notice_text" : 
+            {
+                "en" : "Notice text for screen 2",
+                "fr" : "Texte de notice pour l'&eacute;cran 2"
+            },
+            "previous_screen" : "1",
+            "next_screen" : 
+            {
+                "true" : "3",
+                "false" : "4",
+                "default" : "3"
+            },
+            "enforce_checks" : true,
+            "logic" :
+            {
+                "has_logic" : true,
+                "endpoint_key" : "compare",
+                "input_args" :
+                {
+                    "parameter" : "Subfield h",
+                    "threshold" : 8,
+                    "operation" : "greater"
+                }
+            }
+        },
+        "3" :
+        {  
+            "screen_type" : "medical test", 
+            "fields":
+            {
+                "Field 4" :
+                {
+                    "sub_fields" :
+                    {
+                        "Subfield i" :
+                        {
+                            "field_type" : "text_entry",
+                            "unit" : "",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "nil",
+                            "step" : 0,
+                            "is_required" : false,
+                            "display_text" :
+                            {
+                                "en" : "Subfield i",
+                                "fr" : "Sous-champ i"
+                            }
+                        },
+                        "Subfield j" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "g",
+                            "min_value" : 0,
+                            "max_value" : 10,
+                            "default_value" : 8,
+                            "step" : 0.01,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield j",
+                                "fr" : "Sous-champ j"
+                            }
+                        }
+                    },
+                    "notice_text" : 
+                    {
+                        "en" : "Notice text for field 4",
+                        "fr" : "Texte de notice pour le champ 4"
+                    },
+                    "is_required" : false,
+                    "display_text" :
+                    {
+                        "en" : "Field 4",
+                        "fr" : "Champ 4"
+                    }
+                }
+            },
+            "notice_text" :
+            {
+                "en" : "Notice text for screen 3",
+                "fr" : "Texte de notice pour l'&eacute;cran 3"
+            },
+            "previous_screen" : "2",
+            "next_screen" :
+            {
+                "true" : "nil",
+                "false" : "nil",
+                "default" : "end"
+            },
+            "enforce_checks" : true,
+            "logic" :
+            {
+                "has_logic" : false,
+                "endpoint_key" : "nil",
+                "input_args" :
+                {}
+            }
+        },
+        "4" :
+        {  
+            "screen_type" : "medical test", 
+            "fields":
+            {
+                "Field 5" :
+                {
+                    "sub_fields" :
+                    {
+                        "Subfield k" :
+                        {
+                            "field_type" : "text_entry",
+                            "unit" : "",
+                            "min_value" : 0,
+                            "max_value" : 0,
+                            "default_value" : "nil",
+                            "step" : 0,
+                            "is_required" : false,
+                            "display_text" :
+                            {
+                                "en" : "Subfield k",
+                                "fr" : "Sous-champ k"
+                            }
+                        },
+                        "Subfield l" :
+                        {
+                            "field_type" : "numeric_entry",
+                            "unit" : "g",
+                            "min_value" : 0,
+                            "max_value" : 10,
+                            "default_value" : 8,
+                            "step" : 0.01,
+                            "is_required" : true,
+                            "display_text" :
+                            {
+                                "en" : "Subfield l",
+                                "fr" : "Sous-champ l"
+                            }
+                        }
+                    },
+                    "notice_text" : 
+                    {
+                        "en" : "Notice text for field 5",
+                        "fr" : "Texte de notice pour le champ 5"
+                    },
+                    "is_required" : false,
+                    "display_text" :
+                    {
+                        "en" : "Field 5",
+                        "fr" : "Champ 5"
+                    }
+                }
+            },
+            "notice_text" :
+            {
+                "en" : "Notice text for screen 4",
+                "fr" : "Texte de notice pour l'&eacute;cran 4"
+            },
+            "previous_screen" : "2",
+            "next_screen" :
+            {
+                "true" : "nil",
+                "false" : "nil",
+                "default" : "end"
+            },
+            "enforce_checks" : true,
+            "logic" :
+            {
+                "has_logic" : false,
+                "endpoint_key" : "nil",
+                "input_args" : 
+                {}
+            }
+        },
+        "end_screen" :
+        {
+            "screen_type" : "end",
+            "display_text" :
+            {   
+                "en" : "End Screen",
+                "fr" : "Ecran de fin"
+            },
+            "notice_text" :
+            {
+                "en" : "Notice text for end screen",
+                "fr" : "Texte de notice pour l'écran de fin"
+            },
+            "is_required" : true,
+            "is_active" : true
+        }
+    }
+}
+            
